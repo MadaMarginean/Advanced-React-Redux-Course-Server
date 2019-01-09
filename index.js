@@ -3,11 +3,13 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan'); // morgan is a login framework
 const app = express();
+const router = require('./router');
 
 // App Setup
 
 app.use(morgan('combined'));
 app.use(bodyParser.json({ type: '*/*' }));
+router(app);
 
 // Server Setup
 
