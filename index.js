@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan'); // morgan is a login framework
 const app = express();
 const router = require('./router');
+const mongoose = require('mongoose');
+
+// DB Setup
+
+mongoose.connect('mongodb://localhost:auth/auth', { useNewUrlParser: true });
 
 // App Setup
 
